@@ -30,9 +30,12 @@
           <Color blue="0" green="99" red="ff" type="rgb"/>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+      </AccessibilityProperties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="270" y="70" width="400" height="400"/>
+          <AbsoluteConstraints x="200" y="100" width="360" height="360"/>
         </Constraint>
       </Constraints>
 

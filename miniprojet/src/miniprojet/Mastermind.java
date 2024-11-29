@@ -57,7 +57,8 @@ public class Mastermind extends javax.swing.JFrame {
             .addGap(0, 400, Short.MAX_VALUE)
         );
 
-        getContentPane().add(PanneauCombinaison, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 400, 400));
+        getContentPane().add(PanneauCombinaison, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 360, 360));
+        PanneauCombinaison.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
