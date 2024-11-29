@@ -9,5 +9,22 @@ package miniprojet;
  * @author felix
  */
 public class Pion {
-    
+private char couleur;
+
+public Pion(char Couleur) {
+        couleur = Couleur;
+    }
+public char getCouleur() {
+        return couleur;
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+public String toString() {
+    return String.valueOf(couleur);
+}
+
 }
