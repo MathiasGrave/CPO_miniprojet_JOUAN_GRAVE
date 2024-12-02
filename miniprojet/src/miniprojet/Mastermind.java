@@ -27,15 +27,12 @@ public class Mastermind extends javax.swing.JFrame {
                 JButton bouton_cellule = new JButton(); // création d'un bouton
                 PanneauCombinaison.add(bouton_cellule); // ajout au Jpanel PanneauGrille
 
-        int nbLignes2 = 1;
-        int nbColonnes2 = 8;    
-        BoutonsChoix.setLayout(new GridLayout(nbLignes2, nbColonnes2));
-        for (int k=0;k<nbColonnes2;k++){
-            for(int l=0;l<nbLignes2;l++){
+        int nbcolonnes = 8;    
+        BoutonsChoix.setLayout(new GridLayout(1, nbcolonnes));
+        for (int k=0;k<nbcolonnes;k++){
+            JButton bouton_Cellule = new JButton(); // création d'un bouton
+            BoutonsChoix.add(bouton_Cellule); // ajout au Jpanel PanneauGrille
             
-            JButton bouton_cellule2 = new JButton(); // création d'un bouton
-            BoutonsChoix.add(bouton_cellule2); // ajout au Jpanel PanneauGrille
-            }
         }
  }
 }
@@ -56,6 +53,7 @@ public class Mastermind extends javax.swing.JFrame {
         PanneauCombinaison = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setSize(new java.awt.Dimension(612, 604));
 
         BoutonsChoix.setBackground(new java.awt.Color(204, 0, 204));
 
@@ -82,7 +80,7 @@ public class Mastermind extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGap(0, 560, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.LINE_END);
@@ -97,7 +95,7 @@ public class Mastermind extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGap(0, 560, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel4, java.awt.BorderLayout.LINE_START);
@@ -112,7 +110,7 @@ public class Mastermind extends javax.swing.JFrame {
         );
         PanneauCombinaisonLayout.setVerticalGroup(
             PanneauCombinaisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGap(0, 560, Short.MAX_VALUE)
         );
 
         getContentPane().add(PanneauCombinaison, java.awt.BorderLayout.CENTER);
