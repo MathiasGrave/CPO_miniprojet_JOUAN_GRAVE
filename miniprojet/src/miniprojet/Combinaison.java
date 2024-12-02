@@ -50,5 +50,17 @@ public class Combinaison {
         indice[1]=malPlace;
         return indice;
     }
+
+    @Override
+    public String toString() {
+        char Couleur;
+        char [] Couleurs = new char[taille];
+        for (int i=0;i<taille;i++){
+            Couleur = element[i].getCouleur();
+            Couleurs[i]=Couleur;
+        }
+            return "Combinaison{" +Couleurs +'}';
+    }
+    
     
 }
