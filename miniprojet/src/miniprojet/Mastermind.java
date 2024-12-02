@@ -39,10 +39,79 @@ public class Mastermind extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         PanneauCombinaison = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel2.setLayout(new java.awt.GridLayout(1, 8));
+
+        jButton1.setText("jButton1");
+        jPanel2.add(jButton1);
+
+        jButton2.setText("jButton2");
+        jPanel2.add(jButton2);
+
+        jButton3.setText("jButton3");
+        jPanel2.add(jButton3);
+
+        jButton4.setText("jButton4");
+        jPanel2.add(jButton4);
+
+        jButton5.setText("jButton5");
+        jPanel2.add(jButton5);
+
+        jButton7.setText("jButton7");
+        jPanel2.add(jButton7);
+
+        jButton6.setText("jButton6");
+        jPanel2.add(jButton6);
+
+        jButton8.setText("jButton8");
+        jPanel2.add(jButton8);
+
+        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_END);
+
+        jPanel3.setBackground(new java.awt.Color(0, 255, 204));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 393, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel3, java.awt.BorderLayout.LINE_END);
+
+        jPanel4.setBackground(new java.awt.Color(0, 102, 255));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 393, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel4, java.awt.BorderLayout.LINE_START);
 
         PanneauCombinaison.setBackground(new java.awt.Color(255, 153, 0));
 
@@ -50,14 +119,14 @@ public class Mastermind extends javax.swing.JFrame {
         PanneauCombinaison.setLayout(PanneauCombinaisonLayout);
         PanneauCombinaisonLayout.setHorizontalGroup(
             PanneauCombinaisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 412, Short.MAX_VALUE)
         );
         PanneauCombinaisonLayout.setVerticalGroup(
             PanneauCombinaisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 393, Short.MAX_VALUE)
         );
 
-        getContentPane().add(PanneauCombinaison, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 360, 360));
+        getContentPane().add(PanneauCombinaison, java.awt.BorderLayout.CENTER);
         PanneauCombinaison.getAccessibleContext().setAccessibleName("");
 
         pack();
@@ -100,5 +169,16 @@ public class Mastermind extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanneauCombinaison;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }
