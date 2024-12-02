@@ -23,10 +23,20 @@ public class Mastermind extends javax.swing.JFrame {
         int nbColonnes = 4;
         PanneauCombinaison.setLayout(new GridLayout(nbLignes, nbColonnes));
         for (int i=0; i < nbLignes; i++) {
-    for (int j=0; j < nbColonnes; j++ ) {
-        JButton bouton_cellule = new JButton(); // création d'un bouton
-        PanneauCombinaison.add(bouton_cellule); // ajout au Jpanel PanneauGrille
-        initComponents();
+            for (int j=0; j < nbColonnes; j++ ) {
+                JButton bouton_cellule = new JButton(); // création d'un bouton
+                PanneauCombinaison.add(bouton_cellule); // ajout au Jpanel PanneauGrille
+
+        int nbLignes2 = 1;
+        int nbColonnes2 = 8;    
+        BoutonsChoix.setLayout(new GridLayout(nbLignes2, nbColonnes2));
+        for (int k=0;k<nbColonnes2;k++){
+            for(int l=0;l<nbLignes2;l++){
+            
+            JButton bouton_cellule2 = new JButton(); // création d'un bouton
+            BoutonsChoix.add(bouton_cellule2); // ajout au Jpanel PanneauGrille
+            }
+        }
  }
 }
     }
@@ -40,49 +50,27 @@ public class Mastermind extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        BoutonsChoix = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         PanneauCombinaison = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 204));
-        jPanel2.setLayout(new java.awt.GridLayout(1, 8));
+        BoutonsChoix.setBackground(new java.awt.Color(204, 0, 204));
 
-        jButton1.setText("jButton1");
-        jPanel2.add(jButton1);
+        javax.swing.GroupLayout BoutonsChoixLayout = new javax.swing.GroupLayout(BoutonsChoix);
+        BoutonsChoix.setLayout(BoutonsChoixLayout);
+        BoutonsChoixLayout.setHorizontalGroup(
+            BoutonsChoixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        BoutonsChoixLayout.setVerticalGroup(
+            BoutonsChoixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 111, Short.MAX_VALUE)
+        );
 
-        jButton2.setText("jButton2");
-        jPanel2.add(jButton2);
-
-        jButton3.setText("jButton3");
-        jPanel2.add(jButton3);
-
-        jButton4.setText("jButton4");
-        jPanel2.add(jButton4);
-
-        jButton5.setText("jButton5");
-        jPanel2.add(jButton5);
-
-        jButton7.setText("jButton7");
-        jPanel2.add(jButton7);
-
-        jButton6.setText("jButton6");
-        jPanel2.add(jButton6);
-
-        jButton8.setText("jButton8");
-        jPanel2.add(jButton8);
-
-        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_END);
+        getContentPane().add(BoutonsChoix, java.awt.BorderLayout.PAGE_END);
 
         jPanel3.setBackground(new java.awt.Color(0, 255, 204));
 
@@ -94,7 +82,7 @@ public class Mastermind extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 393, Short.MAX_VALUE)
+            .addGap(0, 493, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.LINE_END);
@@ -109,7 +97,7 @@ public class Mastermind extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 393, Short.MAX_VALUE)
+            .addGap(0, 493, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel4, java.awt.BorderLayout.LINE_START);
@@ -124,7 +112,7 @@ public class Mastermind extends javax.swing.JFrame {
         );
         PanneauCombinaisonLayout.setVerticalGroup(
             PanneauCombinaisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 393, Short.MAX_VALUE)
+            .addGap(0, 493, Short.MAX_VALUE)
         );
 
         getContentPane().add(PanneauCombinaison, java.awt.BorderLayout.CENTER);
@@ -169,16 +157,8 @@ public class Mastermind extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BoutonsChoix;
     private javax.swing.JPanel PanneauCombinaison;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
