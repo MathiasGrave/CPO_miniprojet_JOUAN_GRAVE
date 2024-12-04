@@ -35,9 +35,15 @@ public class Mastermind extends javax.swing.JFrame {
             
             JButton bouton_choix = new JButton(); // création d'un bouton
             BoutonsChoix.add(bouton_choix); // ajout au Jpanel PanneauGrille
+        }
+        Indices.setLayout(new GridLayout(nbLignes, 1));
+         for (int i=0; i < nbLignes; i++) {
+
+                JButton bouton_tentatives = new JButton(); // création d'un bouton
+                PanneauCombinaison.add(bouton_tentatives); // ajout au Jpanel PanneauGrille  
         
         }
-
+        
     }
     
 
@@ -51,13 +57,14 @@ public class Mastermind extends javax.swing.JFrame {
     private void initComponents() {
 
         BoutonsChoix = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        Boutons_valider_quitter = new javax.swing.JPanel();
+        Bouton_valider = new javax.swing.JButton();
+        Bouton_quitter = new javax.swing.JButton();
+        Indices = new javax.swing.JPanel();
         PanneauCombinaison = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(100, 700));
-        setPreferredSize(new java.awt.Dimension(612, 700));
         setSize(new java.awt.Dimension(612, 700));
 
         BoutonsChoix.setBackground(new java.awt.Color(204, 0, 204));
@@ -77,37 +84,51 @@ public class Mastermind extends javax.swing.JFrame {
 
         getContentPane().add(BoutonsChoix, java.awt.BorderLayout.PAGE_END);
 
-        jPanel3.setBackground(new java.awt.Color(0, 255, 204));
-        jPanel3.setPreferredSize(new java.awt.Dimension(100, 300));
+        Boutons_valider_quitter.setBackground(new java.awt.Color(0, 255, 204));
+        Boutons_valider_quitter.setPreferredSize(new java.awt.Dimension(100, 300));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        Bouton_valider.setText("Bouton_valider");
+
+        Bouton_quitter.setText("Bouton_quitter");
+
+        javax.swing.GroupLayout Boutons_valider_quitterLayout = new javax.swing.GroupLayout(Boutons_valider_quitter);
+        Boutons_valider_quitter.setLayout(Boutons_valider_quitterLayout);
+        Boutons_valider_quitterLayout.setHorizontalGroup(
+            Boutons_valider_quitterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Boutons_valider_quitterLayout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addGroup(Boutons_valider_quitterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Bouton_quitter, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Bouton_valider, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
+        );
+        Boutons_valider_quitterLayout.setVerticalGroup(
+            Boutons_valider_quitterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Boutons_valider_quitterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Bouton_valider, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 338, Short.MAX_VALUE)
+                .addComponent(Bouton_quitter, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+        );
+
+        getContentPane().add(Boutons_valider_quitter, java.awt.BorderLayout.LINE_END);
+
+        Indices.setBackground(new java.awt.Color(0, 102, 255));
+        Indices.setPreferredSize(new java.awt.Dimension(100, 300));
+
+        javax.swing.GroupLayout IndicesLayout = new javax.swing.GroupLayout(Indices);
+        Indices.setLayout(IndicesLayout);
+        IndicesLayout.setHorizontalGroup(
+            IndicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        IndicesLayout.setVerticalGroup(
+            IndicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 272, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel3, java.awt.BorderLayout.LINE_END);
-
-        jPanel4.setBackground(new java.awt.Color(0, 102, 255));
-        jPanel4.setPreferredSize(new java.awt.Dimension(100, 300));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel4, java.awt.BorderLayout.LINE_START);
+        getContentPane().add(Indices, java.awt.BorderLayout.LINE_START);
 
         PanneauCombinaison.setBackground(new java.awt.Color(255, 153, 0));
         PanneauCombinaison.setMaximumSize(new java.awt.Dimension(32767, 3000));
@@ -166,9 +187,11 @@ public class Mastermind extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bouton_quitter;
+    private javax.swing.JButton Bouton_valider;
     private javax.swing.JPanel BoutonsChoix;
+    private javax.swing.JPanel Boutons_valider_quitter;
+    private javax.swing.JPanel Indices;
     private javax.swing.JPanel PanneauCombinaison;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }

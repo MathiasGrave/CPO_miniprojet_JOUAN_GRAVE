@@ -24,9 +24,7 @@ public class PlateauDeJeu {
         this.reponses = new ArrayList<>();
     }
 
-    public [] proposerCombinaison(Combinaison tentative) {
-        tentatives.add(tentative);
-        return tentatives
+
 
     
 
