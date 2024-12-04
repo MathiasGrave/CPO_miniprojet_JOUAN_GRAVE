@@ -24,16 +24,17 @@ public class Mastermind extends javax.swing.JFrame {
         PanneauCombinaison.setLayout(new GridLayout(nbLignes, nbColonnes));
         for (int i=0; i < nbLignes; i++) {
             for (int j=0; j < nbColonnes; j++ ) {
-                JButton bouton_cellule = new JButton(); // création d'un bouton
-                PanneauCombinaison.add(bouton_cellule); // ajout au Jpanel PanneauGrille   
+                JButton bouton_tentatives = new JButton(); // création d'un bouton
+                PanneauCombinaison.add(bouton_tentatives); // ajout au Jpanel PanneauGrille  
+        
         int nbcolonnes = 8;   
         int nbligne = 1;
         BoutonsChoix.setLayout(new GridLayout(nbligne, nbcolonnes));
         for (int k=0; k < nbcolonnes; k++ ){
-            for(int l=0; l <= nbligne; l++ ){
-            JButton bouton_Cellule = new JButton(); // création d'un bouton
-            BoutonsChoix.add(bouton_Cellule); // ajout au Jpanel PanneauGrille
-            }
+            
+            JButton bouton_choix = new JButton(); // création d'un bouton
+            BoutonsChoix.add(bouton_choix); // ajout au Jpanel PanneauGrille
+        
         }
  }
 }
