@@ -26,7 +26,8 @@ public class Mastermind extends javax.swing.JFrame {
             for (int j=0; j < nbColonnes; j++ ) {
                 JButton bouton_tentatives = new JButton(); // création d'un bouton
                 PanneauCombinaison.add(bouton_tentatives); // ajout au Jpanel PanneauGrille  
-        
+  }
+}       
         int nbcolonnes = 8;   
         int nbligne = 1;
         BoutonsChoix.setLayout(new GridLayout(nbligne, nbcolonnes));
@@ -36,9 +37,9 @@ public class Mastermind extends javax.swing.JFrame {
             BoutonsChoix.add(bouton_choix); // ajout au Jpanel PanneauGrille
         
         }
- }
-}
+
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
