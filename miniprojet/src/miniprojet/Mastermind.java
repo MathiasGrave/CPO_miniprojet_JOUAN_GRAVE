@@ -2,6 +2,7 @@ package miniprojet;
 
 import java.awt.GridLayout;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -39,8 +40,8 @@ public class Mastermind extends javax.swing.JFrame {
         Indices.setLayout(new GridLayout(nbLignes, 1));
          for (int i=0; i < nbLignes; i++) {
 
-                JButton bouton_tentatives = new JButton(); // création d'un bouton
-                PanneauCombinaison.add(bouton_tentatives); // ajout au Jpanel PanneauGrille  
+                JLabel bouton_indices = new JLabel(); // création d'un bouton
+                Indices.add(bouton_indices); // ajout au Jpanel PanneauGrille  
         
         }
         
@@ -60,6 +61,7 @@ public class Mastermind extends javax.swing.JFrame {
         Boutons_valider_quitter = new javax.swing.JPanel();
         Bouton_valider = new javax.swing.JButton();
         Bouton_quitter = new javax.swing.JButton();
+        Bouton_regle = new javax.swing.JButton();
         Indices = new javax.swing.JPanel();
         PanneauCombinaison = new javax.swing.JPanel();
 
@@ -69,7 +71,7 @@ public class Mastermind extends javax.swing.JFrame {
 
         BoutonsChoix.setBackground(new java.awt.Color(204, 0, 204));
         BoutonsChoix.setMinimumSize(new java.awt.Dimension(100, 100));
-        BoutonsChoix.setPreferredSize(new java.awt.Dimension(612, 100));
+        BoutonsChoix.setPreferredSize(new java.awt.Dimension(612, 76));
 
         javax.swing.GroupLayout BoutonsChoixLayout = new javax.swing.GroupLayout(BoutonsChoix);
         BoutonsChoix.setLayout(BoutonsChoixLayout);
@@ -79,7 +81,7 @@ public class Mastermind extends javax.swing.JFrame {
         );
         BoutonsChoixLayout.setVerticalGroup(
             BoutonsChoixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
 
         getContentPane().add(BoutonsChoix, java.awt.BorderLayout.PAGE_END);
@@ -88,8 +90,20 @@ public class Mastermind extends javax.swing.JFrame {
         Boutons_valider_quitter.setPreferredSize(new java.awt.Dimension(100, 300));
 
         Bouton_valider.setText("Bouton_valider");
+        Bouton_valider.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton_validerActionPerformed(evt);
+            }
+        });
 
         Bouton_quitter.setText("Bouton_quitter");
+
+        Bouton_regle.setText("Règle");
+        Bouton_regle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton_regleActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Boutons_valider_quitterLayout = new javax.swing.GroupLayout(Boutons_valider_quitter);
         Boutons_valider_quitter.setLayout(Boutons_valider_quitterLayout);
@@ -99,7 +113,8 @@ public class Mastermind extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(Boutons_valider_quitterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Bouton_quitter, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Bouton_valider, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(Bouton_valider, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Bouton_regle, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(22, 22, 22))
         );
         Boutons_valider_quitterLayout.setVerticalGroup(
@@ -107,7 +122,9 @@ public class Mastermind extends javax.swing.JFrame {
             .addGroup(Boutons_valider_quitterLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Bouton_valider, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 338, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(Bouton_regle, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 296, Short.MAX_VALUE)
                 .addComponent(Bouton_quitter, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
@@ -125,7 +142,7 @@ public class Mastermind extends javax.swing.JFrame {
         );
         IndicesLayout.setVerticalGroup(
             IndicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
+            .addGap(0, 508, Short.MAX_VALUE)
         );
 
         getContentPane().add(Indices, java.awt.BorderLayout.LINE_START);
@@ -142,7 +159,7 @@ public class Mastermind extends javax.swing.JFrame {
         );
         PanneauCombinaisonLayout.setVerticalGroup(
             PanneauCombinaisonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
+            .addGap(0, 508, Short.MAX_VALUE)
         );
 
         getContentPane().add(PanneauCombinaison, java.awt.BorderLayout.CENTER);
@@ -150,6 +167,14 @@ public class Mastermind extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Bouton_regleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton_regleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bouton_regleActionPerformed
+
+    private void Bouton_validerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton_validerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bouton_validerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,6 +213,7 @@ public class Mastermind extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Bouton_quitter;
+    private javax.swing.JButton Bouton_regle;
     private javax.swing.JButton Bouton_valider;
     private javax.swing.JPanel BoutonsChoix;
     private javax.swing.JPanel Boutons_valider_quitter;
