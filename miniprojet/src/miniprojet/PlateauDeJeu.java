@@ -34,14 +34,6 @@ public class PlateauDeJeu {
             System.out.println("Tentative " + (i + 1) + ": " + tentatives.get(i) + " -> " + reponses.get(i));
         }
     }
-
-    public boolean estVictoire() {
-        if (!tentatives.isEmpty()) {
-            Combinaison derniereTentative = tentatives.get(tentatives.size() - 1);
-            return derniereTentative.equals(combinaisonSecrete);
-        }
-        return false;
-    }
     public boolean estVictoire(ArrayList<Combinaison> tentatives, Combinaison combinaisonSecrete){
         boolean Victoire=false;
         int Tour_actuelle=tentatives.size();
@@ -61,11 +53,4 @@ public class PlateauDeJeu {
         }
         return Defaite;
     }
-
-    private String genererIndices(Combinaison tentative) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    
-  
 }

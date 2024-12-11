@@ -67,11 +67,11 @@ public class Mastermind extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(100, 700));
-        setSize(new java.awt.Dimension(612, 700));
+        setSize(new java.awt.Dimension(640, 700));
 
         BoutonsChoix.setBackground(new java.awt.Color(204, 0, 204));
         BoutonsChoix.setMinimumSize(new java.awt.Dimension(100, 100));
-        BoutonsChoix.setPreferredSize(new java.awt.Dimension(612, 76));
+        BoutonsChoix.setPreferredSize(new java.awt.Dimension(640, 76));
 
         javax.swing.GroupLayout BoutonsChoixLayout = new javax.swing.GroupLayout(BoutonsChoix);
         BoutonsChoix.setLayout(BoutonsChoixLayout);
