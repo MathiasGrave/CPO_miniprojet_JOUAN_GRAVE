@@ -42,9 +42,24 @@ public class PlateauDeJeu {
         }
         return false;
     }
+    public boolean estVictoire(ArrayList<Combinaison> tentatives, Combinaison combinaisonSecrete){
+        boolean Victoire=false;
+        int Tour_actuelle=tentatives.size();
+        for (int i=0; i<Tour_actuelle; i++){
+            Combinaison tentative=tentatives.get(i);
+            if(tentative==combinaisonSecrete){
+                Victoire=true;
+        }
+        }
+        return Victoire;
+    }
 
-    public boolean estDefaite() {
-        return tentatives.size() >= nbToursMax;
+    public boolean estDefaite(ArrayList<Combinaison> tentatives, int nbToursMax) {
+        boolean Defaite=false;
+        if (tentatives.size() >= nbToursMax){
+            Defaite=true;
+        }
+        return Defaite;
     }
 
     private String genererIndices(Combinaison tentative) {

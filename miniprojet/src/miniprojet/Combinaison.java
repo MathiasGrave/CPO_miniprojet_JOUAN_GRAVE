@@ -12,7 +12,7 @@ import java.util.Random;
  * @author Grave
  */
 public class Combinaison {
-    Pion[] element;
+    Pion[] element=new Pion[4];
     int taille;
 
     public Combinaison(Pion[] element) {
