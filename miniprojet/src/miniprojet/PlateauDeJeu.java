@@ -24,7 +24,12 @@ public class PlateauDeJeu {
         this.reponses = new ArrayList<>();
     }
 
-
+    public Combinaison proposerCombinaison(Combinaison tentatives, Pion[] pion_choisi){
+        
+        Combinaison Tentative= new Combinaison(pion_choisi);
+        
+        return Tentative;
+    }
 
     
 

@@ -22,10 +22,12 @@ public class Mastermind extends javax.swing.JFrame {
         initComponents();
         int nbLignes = 10;
         int nbColonnes = 4;
+        Pion_graphique[][] matrice = new Pion_graphique[10][4];
         PanneauCombinaison.setLayout(new GridLayout(nbLignes, nbColonnes));
         for (int i=0; i < nbLignes; i++) {
             for (int j=0; j < nbColonnes; j++ ) {
-                JButton bouton_tentatives = new JButton(); // création d'un bouton
+                Pion_graphique bouton_tentatives = new Pion_graphique(0);// création d'un bouton
+                matrice[i][j]=bouton_tentatives;
                 PanneauCombinaison.add(bouton_tentatives); // ajout au Jpanel PanneauGrille  
   }
 }       

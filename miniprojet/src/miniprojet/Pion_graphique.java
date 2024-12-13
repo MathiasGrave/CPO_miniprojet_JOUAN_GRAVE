@@ -15,6 +15,11 @@ import javax.swing.JButton;
  */
 public class Pion_graphique extends JButton{
     Pion pion_associe;
+    int Valeur;
+
+    public Pion_graphique(int Valeur) {
+        this.Valeur = Valeur;
+    }
     
     @Override
     protected void paintComponent(Graphics g) {
