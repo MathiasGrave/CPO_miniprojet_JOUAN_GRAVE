@@ -53,8 +53,8 @@ public class Combinaison {
 
     @Override
     public String toString() {
-        char Couleur;
-        char [] Couleurs = new char[taille];
+        String Couleur;
+        String [] Couleurs = new String[taille];
         for (int i=0;i<taille;i++){
             Couleur = element[i].getCouleur();
             Couleurs[i]=Couleur;
