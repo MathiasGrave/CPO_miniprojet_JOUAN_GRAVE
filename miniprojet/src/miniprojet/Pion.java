@@ -4,12 +4,14 @@
  */
 package miniprojet;
 
+import javax.swing.JButton;
+
 
 /**
  *Jouan
  * @author felix
  */
-public class Pion {
+public class Pion extends JButton{
 private char couleur;
 int x;
 int y;
