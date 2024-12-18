@@ -15,6 +15,7 @@ public class Pion extends JButton{
 String couleur;
 int x;
 int y;
+int valeur;
 
 public int getValeur(){
     int Valeur;
@@ -45,8 +46,9 @@ public int getValeur(){
     return Valeur;
 }
 
-public Pion(String Couleur) {
-        couleur = Couleur;
+public Pion(int Valeur) {
+        valeur=Valeur;
+        
     }
 public String getCouleur() {
         return couleur;

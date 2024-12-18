@@ -22,11 +22,14 @@ public class Mastermind extends javax.swing.JFrame {
         initComponents();
         int nbLignes = 10;
         int nbColonnes = 4;
-
+        Pion_graphique[][] matrice = new Pion_graphique[10][4];
         PanneauCombinaison.setLayout(new GridLayout(nbLignes, nbColonnes));
         for (int i=0; i < nbLignes; i++) {
             for (int j=0; j < nbColonnes; j++ ) {
-                JButton bouton_tentatives = new JButton();// création d'un bouton
+                Pion_graphique bouton_tentatives = new Pion_graphique(i);// création d'un bouton
+                Pion Pion_choix= new Pion(0);
+                bouton_tentatives.pion_associe=Pion_choix;
+                matrice[i][j]=bouton_tentatives;
                 PanneauCombinaison.add(bouton_tentatives); // ajout au Jpanel PanneauGrille  
   }
 }       
@@ -35,7 +38,10 @@ public class Mastermind extends javax.swing.JFrame {
         BoutonsChoix.setLayout(new GridLayout(nbligne, nbcolonnes));
         for (int k=0; k < nbcolonnes; k++ ){
             
-            JButton bouton_choix = new JButton(); // création d'un bouton
+            Pion_graphique bouton_choix = new Pion_graphique(k);// création d'un bouton
+            int place2 = k*80;
+            Pion Pion_pour_choix= new Pion(place2);
+            bouton_choix.pion_associe=Pion_pour_choix;
             BoutonsChoix.add(bouton_choix); // ajout au Jpanel PanneauGrille
         }
         Indices.setLayout(new GridLayout(nbLignes, 1));
