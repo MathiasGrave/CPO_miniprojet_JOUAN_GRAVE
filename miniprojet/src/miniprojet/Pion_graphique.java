@@ -14,8 +14,8 @@ import javax.swing.JButton;
  * @author Grave
  */
 public class Pion_graphique extends JButton{
-    Pion pion_associe;
-    int Valeur;
+    public Pion pion_associe;
+    public int Valeur;
 
     public Pion_graphique(int Valeur) {
         this.Valeur = Valeur;

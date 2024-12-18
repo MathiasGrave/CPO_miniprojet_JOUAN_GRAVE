@@ -1,9 +1,15 @@
 package miniprojet;
 
+
+
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import miniprojet.Pion;
+import miniprojet.Pion_graphique;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -20,8 +26,9 @@ public class Mastermind extends javax.swing.JFrame {
      * Creates new form Mastermind
      *
      */ 
-Color[] palette = {Color.RED, Color.GRAY, Color.MAGENTA, Color.GREEN, Color.CYAN, Color.WHITE, Color.BLACK, Color.YELLOW};
+Color[] palette = {Color.RED, Color.BLUE, Color.MAGENTA, Color.GREEN, Color.CYAN, Color.WHITE, Color.BLACK, Color.YELLOW};
     public Mastermind(){
+
         initComponents();
         
         
@@ -33,9 +40,11 @@ Color[] palette = {Color.RED, Color.GRAY, Color.MAGENTA, Color.GREEN, Color.CYAN
             for (int j=0; j < nbColonnes; j++ ) {
                 Pion_graphique bouton_tentatives = new Pion_graphique(i);// création d'un bouton
                 Pion Pion_choix= new Pion(0);
+                bouton_tentatives.setBackground(Color.GRAY);
                 bouton_tentatives.pion_associe=Pion_choix;
+                bouton_tentatives.pion_associe.couleur= "Gris";
                 matrice[i][j]=bouton_tentatives;
-                PanneauCombinaison.add(bouton_tentatives); // ajout au Jpanel PanneauGrille  
+                PanneauCombinaison.add(bouton_tentatives);// ajout au Jpanel PanneauGrille  
   }
 }       
         int nbcolonnes = 8;   
@@ -45,20 +54,36 @@ Color[] palette = {Color.RED, Color.GRAY, Color.MAGENTA, Color.GREEN, Color.CYAN
             
             Pion_graphique bouton_choix = new Pion_graphique(k);// création d'un bouton
             bouton_choix.setBackground(palette[k]);
+            Color Couleur_Choisie = palette[k];
             int place2 = k*80;
             Pion Pion_pour_choix= new Pion(place2);
             bouton_choix.pion_associe=Pion_pour_choix;
             BoutonsChoix.add(bouton_choix); // ajout au Jpanel PanneauGrille
-        }
+            bouton_choix.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                    int Xmax=0;
+                    int Ymax =0;        
+                    matrice[Xmax][Ymax].setBackground(Couleur_Choisie);
+                    Xmax++;
+                    if (Xmax==3){
+                        Ymax++;
+                    }
+}
+            });
+            }
+        
         Indices.setLayout(new GridLayout(nbLignes, 1));
          for (int i=0; i < nbLignes; i++) {
 
                 JLabel bouton_indices = new JLabel(); // création d'un bouton
                 Indices.add(bouton_indices); // ajout au Jpanel PanneauGrille  
-        
+                
         }
-        
+
     }
+    }
+
+}
     
 
     /**

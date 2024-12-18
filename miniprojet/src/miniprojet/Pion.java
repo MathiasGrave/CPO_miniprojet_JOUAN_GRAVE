@@ -12,7 +12,7 @@ import javax.swing.JButton;
  * @author felix
  */
 public class Pion extends JButton{
-String couleur;
+public String couleur;
 int x;
 int y;
 int valeur;
