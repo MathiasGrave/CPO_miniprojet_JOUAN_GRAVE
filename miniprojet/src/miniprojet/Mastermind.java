@@ -1,5 +1,6 @@
 package miniprojet;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -17,9 +18,13 @@ public class Mastermind extends javax.swing.JFrame {
 
     /**
      * Creates new form Mastermind
-     */
+     *
+     */ 
+Color[] palette = {Color.RED, Color.GRAY, Color.MAGENTA, Color.GREEN, Color.CYAN, Color.WHITE, Color.BLACK, Color.YELLOW};
     public Mastermind(){
         initComponents();
+        
+        
         int nbLignes = 10;
         int nbColonnes = 4;
         Pion_graphique[][] matrice = new Pion_graphique[10][4];
@@ -39,6 +44,7 @@ public class Mastermind extends javax.swing.JFrame {
         for (int k=0; k < nbcolonnes; k++ ){
             
             Pion_graphique bouton_choix = new Pion_graphique(k);// création d'un bouton
+            bouton_choix.setBackground(palette[k]);
             int place2 = k*80;
             Pion Pion_pour_choix= new Pion(place2);
             bouton_choix.pion_associe=Pion_pour_choix;
@@ -72,7 +78,7 @@ public class Mastermind extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         Bouton_regle = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        BoutonQuitter = new javax.swing.JButton();
         Indices = new javax.swing.JPanel();
         PanneauCombinaison = new javax.swing.JPanel();
 
@@ -138,10 +144,10 @@ public class Mastermind extends javax.swing.JFrame {
             .addComponent(Bouton_regle, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
         );
 
-        jButton1.setText("Bouton_quitter");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BoutonQuitter.setText("Bouton_quitter");
+        BoutonQuitter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BoutonQuitterActionPerformed(evt);
             }
         });
 
@@ -149,11 +155,11 @@ public class Mastermind extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(BoutonQuitter, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+            .addComponent(BoutonQuitter, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout Boutons_valider_quitterLayout = new javax.swing.GroupLayout(Boutons_valider_quitter);
@@ -214,9 +220,9 @@ public class Mastermind extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BoutonQuitterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoutonQuitterActionPerformed
+
+    }//GEN-LAST:event_BoutonQuitterActionPerformed
 
     private void Bouton_regleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton_regleActionPerformed
         // TODO add your handling code here:
@@ -262,6 +268,7 @@ public class Mastermind extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BoutonQuitter;
     private javax.swing.JButton Bouton_quitter;
     private javax.swing.JButton Bouton_regle;
     private javax.swing.JButton Bouton_valider;
@@ -269,7 +276,6 @@ public class Mastermind extends javax.swing.JFrame {
     private javax.swing.JPanel Boutons_valider_quitter;
     private javax.swing.JPanel Indices;
     private javax.swing.JPanel PanneauCombinaison;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
